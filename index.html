@@ -10,16 +10,213 @@
     <link rel="stylesheet" href="./fontawesome-free-6.7.1-web/css/all.css" />
   </head>
   <body>
-    <nav id="nav-bar">
+    <nav id="nav-bar" class="nav-bar">
       <div class="logo">
+        <h2>Meadows Mist</h2>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="scroll-link">Home</a></li>
+        <li><a href="#about" class="scroll-link">About</a></li>
+        <li><a href="#service" class="scroll-link">Service</a></li>
+        <li><a href="#contact" class="scroll-link">Contact Us</a></li>
+      </ul>
+      <!-- <div class="social-icon">
+        <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+        <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+        <a href="#"> <i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"> <i class="fa-brands fa-x-twitter"></i></a>
+      </div> -->
+      <div class="hamburger" onclick="openSidebar()">
+        <i class="fa fa-bars"></i>
+      </div>
+    </nav>
+    <div class="side-bar" id="side-bar">
+      <div class="side-bar-logo">
         <h2>logo</h2>
       </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
+      <div class="side-bar-links" id="nav-links">
+        <a
+          href="#home"
+          onclick="closeSidebar()"
+          class="side-bar-link scroll-link"
+          >Home</a
+        >
+        <a
+          href="#about"
+          onclick="closeSidebar()"
+          class="side-bar-link scroll-link"
+          >About</a
+        >
+        <a
+          href="#service"
+          onclick="closeSidebar()"
+          class="side-bar-link scroll-link"
+          >Service</a
+        >
+        <a
+          href="#contact"
+          onclick="closeSidebar()"
+          class="side-bar-link scroll-link"
+          >Contact Us</a
+        >
+      </div>
+      <div class="side-bar-social-icon">
+        <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+        <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+        <a href="#"> <i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"> <i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <section class="hero-section" id="home">
+      <div class="hero-bg" id="hero-bg"></div>
+      <div class="hero-content">
+        <h1 id="hero-text">We Make Your Spaces Sparkles!</h1>
+        <p>"Enjoy a Professional Cleaning for Home and Workspace"</p>
+      </div>
+      <div class="dots" id="dots-container"></div>
+    </section>
+    <section class="about section" id="about">
+      <div class="section-title">
+        <h1>About Us</h1>
+      </div>
+      <div class="section-center about-center">
+        <div class="about-img-cont">
+          <img src="./images/about-us.webp" alt="about-us-image" />
+        </div>
+        <div class="about-content">
+          <h3>Welcome to Meadows Mist</h3>
+          <p>
+            At Meadows Mist Cleaning Services, we take pride in delivering
+            high-quality, reliable cleaning solutions for homes, offices, and
+            commercial spaces across Manchester. Our team of skilled
+            professionals brings years of expertise, ensuring your space is not
+            just clean but truly immaculate. Whether you need residential
+            cleaning, specialized commercial cleaning, or post-construction
+            cleanup, we are committed to providing exceptional results tailored
+            to your unique needs.
+          </p>
+          <p id="extraText">
+            At Meadows Mist Cleaning, we stand out by using modern cleaning
+            techniques and eco-friendly products while maintaining meticulous
+            attention to detail. Our highly motivated and reliable team goes
+            above and beyond to exceed industry standards, leaving every corner
+            spotless. We carefully select and train our cleaners to ensure you
+            receive top-quality service. Since our founding, our mission has
+            been to redefine cleaning services in Manchester with a focus on
+            quality, reliability, and customer satisfaction. We believe a clean
+            environment enhances well-being and productivity, and we take pride
+            in creating spaces our clients love to live and work in.
+          </p>
+          <button class="btn about-btn" id="toggleButton">show more</button>
+        </div>
+      </div>
+    </section>
+    <section class="services section" id="service">
+      <div class="section-title">
+        <h1>Our Services</h1>
+      </div>
+      <div class="section-center">
+        <p>
+          At Meadows mist We specialize in providing top-quality cleaning
+          services for homes and businesses, ensuring spotless spaces and a
+          healthier environment. Whether you need regular maintenance, deep
+          cleaning, or move-in/move-out services, our dedicated team is here to
+          make your space shine.
+        </p>
+        <div class="service-card-cont">
+          <!-- card1 starts -->
+          <div class="card">
+            <img
+              src="./images/service-2.jpg"
+              alt="service-card"
+              class="edit-img"
+            />
+            <div class="card-content">
+              <h2>commercial Cleaning</h2>
+              <p>
+                "A clean workspace is a productive workspace! 🏢✨ Our
+                professional commercial cleaning services keep your office
+                spotless, fresh, and welcoming. Book now for a cleaner,
+                healthier business environment!"
+              </p>
+            </div>
+          </div>
+          <!-- card1 ends -->
+          <!-- card2 starts -->
+          <div class="card">
+            <img
+              src="./images/service-3.jpg"
+              alt="service-card"
+              class="edit-img"
+            />
+            <div class="card-content">
+              <h2>Residential Cleaning</h2>
+              <p>
+                "A clean home is a happy home! 🏡✨ Let us handle the cleaning
+                so you can relax and enjoy a fresh, spotless space. Book your
+                residential cleaning today!"
+              </p>
+            </div>
+          </div>
+          <!-- card2 ends -->
+          <!-- card3 starts -->
+          <div class="card">
+            <img src="./images/service-1.jpg" alt="service-card" />
+            <div class="card-content">
+              <h2>post-Construction cleanup</h2>
+              <p>
+                "Just finished construction? Leave the mess to us! 🏗️✨ Our
+                post-construction cleanup services will make your space move-in
+                ready—dust-free, spotless, and shining. Book now for a
+                hassle-free cleanup!"
+              </p>
+            </div>
+          </div>
+          <!-- card3 ends -->
+        </div>
+      </div>
+    </section>
+    <section class="section why-us-section">
+      <div class="section-center">
+        <div class="why-us-title section-title">
+          <h1>Why Choose Us</h1>
+        </div>
+        <div class="why-us-cont">
+          <div class="why-us-box">
+            <div class="single-why-us">
+              <i class="fa-solid fa-square-check"></i>
+              <p>Professional, experience and trained cleaners</p>
+            </div>
+            <div class="single-why-us">
+              <i class="fa-solid fa-square-check"></i>
+              <p>Eco-friendly cleaning solutions</p>
+            </div>
+            <div class="single-why-us">
+              <i class="fa-solid fa-square-check"></i>
+              <p>Customized cleaing plans for homes and businesses</p>
+            </div>
+            <div class="single-why-us">
+              <i class="fa-solid fa-square-check"></i>
+              <p>
+                Commitment to customer satisfaction with open feedback channels
+              </p>
+            </div>
+          </div>
+          <div class="why-us-img-cont">
+            <img
+              src="./images/whyChooseUs.jpg"
+              alt="why-us img"
+              class="why-us-img"
+            />
+          </div>
+        </div>
+      </div>
+      <section class="section contact-us-section">
+        <div>
+          <p>contact us</p>
+        </div>
+      </section>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>
