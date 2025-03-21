@@ -129,3 +129,32 @@ scrollLinks.forEach((link) => {
     });
   });
 });
+
+// why us
+
+document.addEventListener("DOMContentLoaded", function () {
+  const whyUsSection = document.querySelector(".why-us-cont");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          whyUsSection.classList.add("animate");
+
+          // Keep it visible after animation
+          setTimeout(() => {
+            whyUsSection.style.visibility = "visible";
+          }, 1000); // Matches animation duration
+
+          // Remove the animation class so it can replay
+          setTimeout(() => {
+            whyUsSection.classList.remove("animate");
+          }, 1500); // Slight delay to reset animation
+        }
+      });
+    },
+    { threshold: 0.9 } // Trigger when 90% is visible
+  );
+
+  observer.observe(whyUsSection);
+});
