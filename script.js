@@ -18,10 +18,10 @@ const images = [
 ];
 
 const texts = [
-  "We Make Your Space Sparkle!",
+  "Professional Cleaning, Exceptional Results!",
   "A Cleaner Home, A Healthier You!",
-  "Spotless & Stress-Free Cleaning Services!",
-  "A Clean Office, A Productive Team!",
+  "Spotless Spaces, Every Time!",
+  "Where Cleanliness Meets Excellence",
 ];
 
 let index = 0;
@@ -157,4 +157,41 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   observer.observe(whyUsSection);
+});
+
+// closeModal
+
+// form
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(this);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mblgzdlg", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        // Show the modal if the form is submitted successfully
+        document.getElementById("modal").style.display = "flex";
+        this.reset(); // Reset form fields
+      } else {
+        alert("There was a problem with your submission.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  });
+
+// Close modal functionality
+document.getElementById("closeModal").addEventListener("click", function () {
+  document.getElementById("modal").style.display = "none";
 });
